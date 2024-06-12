@@ -98,7 +98,8 @@ public class ClientesService {
         String name = "";
         try {
             WebClient build = webClient.clientConnector(new ReactorClientHttpConnector(client))
-            .baseUrl("http://localhost:8084/productos")
+            //.baseUrl("http://localhost:8084/productos")
+            .baseUrl("http://GEN6-PRODUCTOS2024/productos")
             .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
             .build();
             JsonNode block = build.method(HttpMethod.GET).uri("/" + id)
