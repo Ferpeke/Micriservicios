@@ -29,6 +29,16 @@
             "projectName": "Gen6-Productos2024",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Gen6EurekaServer2024Application<Gen6-EurekaServer2024>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.sebastian.eureka.Gen6EurekaServer2024Application",
+            "projectName": "Gen6-EurekaServer2024",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
