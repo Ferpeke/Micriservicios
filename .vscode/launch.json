@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Gen6Parent2024Application<Gen6-Parent2024>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.sebastian.parent.Gen6Parent2024Application",
+            "projectName": "Gen6-Parent2024",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Gen6Clientes2024Application<Gen6-Clientes2024>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.sebastian.clientes.Gen6Clientes2024Application",
+            "projectName": "Gen6-Clientes2024",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Gen6Productos2024Application<Gen6-Productos2024>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.sebastian.productos.Gen6Productos2024Application",
+            "projectName": "Gen6-Productos2024",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
