@@ -51,9 +51,21 @@ public class ClientesController {
         return ResponseEntity.status(HttpStatus.CREATED).body(save);
     }
 
-    @PostMapping("regustrar/producto")
+    // Nuevo
+    @PostMapping("registrar/producto")
     public ResponseEntity<?> post(@RequestBody ClienteProducto c)  {
         ClienteProducto save = cpService.save(c);
         return ResponseEntity.status(HttpStatus.CREATED).body(save);
+    }
+
+    // Nuevo
+    @GetMapping("withInfo")
+    public ResponseEntity<List<Cliente>> withInfo() {
+        List<Cliente> clientes = this.clientesService.getAllWithInfo();
+        if(clientes.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.ok(clientes);
+        }
     }
 }   

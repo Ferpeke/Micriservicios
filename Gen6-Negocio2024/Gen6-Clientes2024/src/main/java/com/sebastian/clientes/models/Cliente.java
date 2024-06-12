@@ -5,8 +5,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import java.util.List;
 
 @Table(name = "clientesM1")
 @Entity
@@ -22,6 +24,9 @@ public class Cliente {
     private String phone;
     private String numeroCuenta;
     private String address;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<ClienteProducto> producto;
 
     // Getters and Setters
     
@@ -61,4 +66,12 @@ public class Cliente {
     public void setAddress(String address) {
         this.address = address;
     }
+    public List<ClienteProducto> getProducto() {
+        return producto;
+    }
+    public void setProducto(List<ClienteProducto> producto) {
+        this.producto = producto;
+    }
+
+    
 }

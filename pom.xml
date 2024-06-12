@@ -16,6 +16,7 @@
 
 	<modules>
 		<module>Gen6-Negocio2024</module>
+		<module>Gen6-Infraestructure2024</module>
 	</modules>
 
 	<dependencyManagement>
@@ -49,6 +50,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
 	</dependencies>
 </project>
