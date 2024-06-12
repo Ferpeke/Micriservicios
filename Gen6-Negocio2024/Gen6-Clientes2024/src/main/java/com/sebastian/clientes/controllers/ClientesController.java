@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sebastian.clientes.models.Cliente;
+import com.sebastian.clientes.models.ClienteProducto;
+import com.sebastian.clientes.services.ClientesProductosService;
 import com.sebastian.clientes.services.ClientesService;
 
 @RestController
@@ -19,6 +21,9 @@ import com.sebastian.clientes.services.ClientesService;
 public class ClientesController {
     @Autowired
     ClientesService clientesService;
+
+    @Autowired
+    ClientesProductosService cpService;
 
     @GetMapping
     public ResponseEntity<List<Cliente>> listar() {
@@ -43,6 +48,12 @@ public class ClientesController {
     @PostMapping
     public ResponseEntity<?> post(@RequestBody Cliente c){
         Cliente save = clientesService.save(c);
+        return ResponseEntity.status(HttpStatus.CREATED).body(save);
+    }
+
+    @PostMapping("regustrar/producto")
+    public ResponseEntity<?> post(@RequestBody ClienteProducto c)  {
+        ClienteProducto save = cpService.save(c);
         return ResponseEntity.status(HttpStatus.CREATED).body(save);
     }
 }   
